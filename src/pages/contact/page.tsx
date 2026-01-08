@@ -232,12 +232,39 @@ export default function ContactPage() {
       setDone(true);
       form.reset();
       resetTypeSpecificState();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch (err: any) {
       setErrorMsg(err?.message ?? '送信に失敗しました。もう一度お試しください。');
     } finally {
       setIsSubmitting(false);
     }
   };
+
+  // ✅ 送信後はこのメッセージだけ表示（ナビ/フォーム/フッター/エラー表示も出さない）
+  if (done) {
+    return (
+      <div className="min-h-screen bg-white font-sans flex items-center justify-center px-6 py-16">
+        <div className="w-full max-w-3xl">
+          <div className="bg-white rounded-3xl shadow-xl p-12 border border-gray-100">
+            <div className="rounded-2xl border border-teal-200 bg-teal-50 px-6 py-6 text-center">
+              <div className="text-sm md:text-base font-semibold text-teal-900">
+                送信が完了しました。3営業日以内に、担当者よりご連絡いたします。
+              </div>
+            </div>
+
+            <div className="mt-10 flex justify-center">
+              <button
+                onClick={handleTopClick}
+                className="bg-teal-600 text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-teal-700 transition-colors shadow-lg whitespace-nowrap cursor-pointer"
+              >
+                TOPへ戻る
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-white font-sans">
@@ -302,11 +329,6 @@ export default function ContactPage() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="bg-white rounded-3xl shadow-xl p-12 border border-gray-100">
-            {done && (
-              <div className="mb-6 rounded-xl border border-teal-200 bg-teal-50 px-4 py-3 text-sm text-teal-900">
-                送信が完了しました。ありがとうございます。担当者よりご連絡します。
-              </div>
-            )}
             {errorMsg && (
               <div className="mb-6 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900">
                 {errorMsg}
@@ -629,12 +651,18 @@ export default function ContactPage() {
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavClick('#products')} className="text-gray-400 hover:text-white transition-colors text-sm cursor-pointer">
+                <button
+                  onClick={() => handleNavClick('#products')}
+                  className="text-gray-400 hover:text-white transition-colors text-sm cursor-pointer"
+                >
                   サービス
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavClick('#features')} className="text-gray-400 hover:text-white transition-colors text-sm cursor-pointer">
+                <button
+                  onClick={() => handleNavClick('#features')}
+                  className="text-gray-400 hover:text-white transition-colors text-sm cursor-pointer"
+                >
                   特徴
                 </button>
               </li>
