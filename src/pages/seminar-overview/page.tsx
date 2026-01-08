@@ -372,10 +372,10 @@ export default function SeminarOverviewPage() {
               </ul>
             </div>
             <Link 
-              to="/contact"
+              to="/contact?type=seminar"
               className="inline-block bg-amber-500 text-white px-12 py-4 rounded-full text-base font-semibold hover:bg-amber-600 transition-all shadow-lg whitespace-nowrap cursor-pointer"
             >
-              無料セミナーに申し込む
+              オンライン無料セミナーの申し込み
             </Link>
           </div>
         </div>
