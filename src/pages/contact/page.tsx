@@ -381,141 +381,126 @@ export default function ContactPage() {
               )}
 
               {/* C: Seminar追加 */}
-              {type === 'seminar' && (
-                <div className="space-y-6">
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">現在の生成AI活用状況 *</label>
-                    <div className="space-y-2 text-sm text-gray-700">
-                      {[
-                        { v: 'not_started', label: '未導入' },
-                        { v: 'personal', label: '個人利用' },
-                        { v: 'pilot', label: '社内検証中' },
-                        { v: 'partial', label: '一部業務で利用中' },
-                        { v: 'companywide', label: '全社導入済' },
-                      ].map((o) => (
-                        <label key={o.v} className="flex items-center gap-2">
-                          <input
-                            type="radio"
-                            name="ai_usage_status"
-                            value={o.v}
-                            checked={aiUsageStatus === o.v}
-                            onChange={(e) => setAiUsageStatus(e.target.value)}
-                          />
-                          <span>{o.label}</span>
-                        </label>
-                      ))}
-                    </div>
-                  </div>
+{type === 'seminar' && (
+  <div className="space-y-6">
+    <div>
+      <label className="block text-sm font-semibold text-gray-700 mb-2">現在の生成AI活用状況 *</label>
+      <div className="space-y-2 text-sm text-gray-700">
+        {[
+          { v: 'not_started', label: '未導入' },
+          { v: 'personal', label: '個人利用' },
+          { v: 'pilot', label: '社内検証中' },
+          { v: 'partial', label: '一部業務で利用中' },
+          { v: 'companywide', label: '全社導入済' },
+        ].map((o) => (
+          <label key={o.v} className="flex items-center gap-2">
+            <input
+              type="radio"
+              name="ai_usage_status"
+              value={o.v}
+              checked={aiUsageStatus === o.v}
+              onChange={(e) => setAiUsageStatus(e.target.value)}
+            />
+            <span>{o.label}</span>
+          </label>
+        ))}
+      </div>
+    </div>
 
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">想定参加人数（任意）</label>
-                      <select
-                        value={seminarHeadcount}
-                        onChange={(e) => setSeminarHeadcount(e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent outline-none transition-all text-sm"
-                      >
-                        <option value="">選択してください</option>
-                        <option value="10_20">10〜20名</option>
-                        <option value="21_50">21〜50名</option>
-                        <option value="51_100">51〜100名</option>
-                        <option value="100_plus">100名以上</option>
-                        <option value="unknown">未定</option>
-                      </select>
-                    </div>
+    <div className="grid md:grid-cols-2 gap-6">
+      <div>
+        <label className="block text-sm font-semibold text-gray-700 mb-2">想定参加人数（任意）</label>
+        <select
+          value={seminarHeadcount}
+          onChange={(e) => setSeminarHeadcount(e.target.value)}
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent outline-none transition-all text-sm"
+        >
+          <option value="">選択してください</option>
+          <option value="10_20">10〜20名</option>
+          <option value="21_50">21〜50名</option>
+          <option value="51_100">51〜100名</option>
+          <option value="100_plus">100名以上</option>
+          <option value="unknown">未定</option>
+        </select>
+      </div>
 
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">助成金活用希望（任意）</label>
-                      <div className="space-y-2 text-sm text-gray-700">
-                        {[
-                          { v: 'want', label: '活用したい' },
-                          { v: 'dont_want', label: '活用したくない' },
-                          { v: 'undecided', label: '未定' },
-                          { v: 'want_details', label: '助成金について詳しく知りたい' },
-                        ].map((o) => (
-                          <label key={o.v} className="flex items-center gap-2">
-                            <input
-                              type="radio"
-                              name="subsidy_preference"
-                              value={o.v}
-                              checked={subsidyPreference === o.v}
-                              onChange={(e) => setSubsidyPreference(e.target.value)}
-                            />
-                            <span>{o.label}</span>
-                          </label>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+      <div>
+        <label className="block text-sm font-semibold text-gray-700 mb-2">助成金活用希望（任意）</label>
+        <div className="space-y-2 text-sm text-gray-700">
+          {[
+            { v: 'want', label: '活用したい' },
+            { v: 'dont_want', label: '活用したくない' },
+            { v: 'undecided', label: '未定' },
+            { v: 'want_details', label: '助成金について詳しく知りたい' },
+          ].map((o) => (
+            <label key={o.v} className="flex items-center gap-2">
+              <input
+                type="radio"
+                name="subsidy_preference"
+                value={o.v}
+                checked={subsidyPreference === o.v}
+                onChange={(e) => setSubsidyPreference(e.target.value)}
+              />
+              <span>{o.label}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+    </div>
 
-                  <div className="text-sm text-gray-600">
-                    ※ 希望日時は平日（月〜金）から選択してください。第1希望は必須です。
-                  </div>
+    <div className="text-sm text-gray-600">
+      ※ 希望日時は平日（月〜金）から選択してください。第1希望は必須です。<br />
+      ※ 時間帯は、10:00〜17:00（1時間枠）から選択できます。
+    </div>
 
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">第1希望（平日） *</label>
-                      <input
-                        type="datetime-local"
-                        value={seminarDt1}
-                        onChange={(e) => setSeminarDt1(e.target.value)}
-                        className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent outline-none transition-all text-sm"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">第2希望（平日）</label>
-                      <input
-                        type="datetime-local"
-                        value={seminarDt2}
-                        onChange={(e) => setSeminarDt2(e.target.value)}
-                        className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent outline-none transition-all text-sm"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">第3希望（平日）</label>
-                      <input
-                        type="datetime-local"
-                        value={seminarDt3}
-                        onChange={(e) => setSeminarDt3(e.target.value)}
-                        className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent outline-none transition-all text-sm"
-                      />
-                    </div>
-                  </div>
-                </div>
-              )}
+    <div className="space-y-4">
+      {[
+        { label: '第1希望（平日） *', d: seminarDate1, setD: setSeminarDate1, s: seminarSlot1, setS: setSeminarSlot1, required: true },
+        { label: '第2希望（平日）', d: seminarDate2, setD: setSeminarDate2, s: seminarSlot2, setS: setSeminarSlot2, required: false },
+        { label: '第3希望（平日）', d: seminarDate3, setD: setSeminarDate3, s: seminarSlot3, setS: setSeminarSlot3, required: false },
+      ].map((x) => (
+        <div key={x.label} className="grid md:grid-cols-3 gap-4 items-end">
+          <div className="md:col-span-1">
+            <label className="block text-sm font-semibold text-gray-700 mb-2">{x.label}</label>
+            <input
+              type="date"
+              value={x.d}
+              onChange={(e) => {
+                const v = e.target.value;
+                if (v && isWeekendDate(v)) {
+                  alert('土日は選択できません。平日（月〜金）を選択してください。');
+                  x.setD('');
+                  x.setS(''); // 日付が無効なら時間帯もクリア
+                  return;
+                }
+                x.setD(v);
+                if (!v) x.setS('');
+              }}
+              className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent outline-none transition-all text-sm"
+              required={x.required}
+            />
+          </div>
 
-              {/* メッセージ（A必須 / B,C任意） */}
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  お問い合わせ内容 {type === 'general' ? '*' : '（任意）'}
-                </label>
-                <textarea
-                  name="message"
-                  required={type === 'general'}
-                  maxLength={2000}
-                  rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent outline-none transition-all resize-none text-sm"
-                  placeholder={
-                    type === 'seminar'
-                      ? 'Google Meetが利用できない場合など、補足があればご記入ください（2000文字以内）'
-                      : 'お問い合わせ内容をご記入ください（2000文字以内）'
-                  }
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className={`w-full py-4 rounded-full font-semibold transition-all shadow-lg whitespace-nowrap cursor-pointer ${
-                  isSubmitting ? 'bg-teal-300 text-white' : 'bg-teal-600 text-white hover:bg-teal-700'
-                }`}
-              >
-                {isSubmitting ? '送信中...' : type === 'seminar' ? '無料セミナーを申し込む' : '送信する'}
-              </button>
-            </form>
+          <div className="md:col-span-2">
+            <label className="block text-sm font-semibold text-gray-700 mb-2">時間帯</label>
+            <select
+              value={x.s}
+              onChange={(e) => x.setS(e.target.value)}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent outline-none transition-all text-sm"
+              required={x.required}
+              disabled={!x.d}
+            >
+              <option value="">選択してください</option>
+              {timeSlots.map((slot) => (
+                <option key={slot} value={slot}>{slot}</option>
+              ))}
+            </select>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+)}
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-16">
