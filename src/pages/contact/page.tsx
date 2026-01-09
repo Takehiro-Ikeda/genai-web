@@ -633,7 +633,7 @@ export default function ContactPage() {
                   isSubmitting ? 'bg-teal-300 text-white' : 'bg-teal-600 text-white hover:bg-teal-700'
                 }`}
               >
-                {isSubmitting ? '送信中...' : type === 'seminar' ? '無料セミナーを申し込む' : '送信する'}
+                {isSubmitting ? '送信中...' : type === 'seminar' ? 'オンライン体験セミナー（無料）を申し込む' : '送信する'}
               </button>
             </form>
           </div>
