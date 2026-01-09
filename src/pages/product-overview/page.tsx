@@ -53,8 +53,8 @@ export default function ProductOverviewPage() {
     {
       icon: 'ri-server-line',
       title: '簡単',
-      description: 'AIに実行させたい業務は closip社が事前に開発し、すぐに使える状態でお届け。生成AIを「学ぶ」負担を最小限に抑え、日常業務ですぐに活用できます',
-      image: 'https://readdy.ai/api/search-image?query=Compact%20high-performance%20AI%20server%20unit%20in%20modern%20office%20environment%20showing%20sleek%20design%20and%20easy%20installation%20with%20plug-and-play%20setup%20in%20professional%20minimalist%20beige%20aesthetic%20emphasizing%20convenience%20and%20powerful%20computing%20capability%20in%20small%20form%20factor&width=600&height=400&seq=602&orientation=landscape'
+      description: 'AIに実行させたい業務は closip社が事前に開発し、すぐに使える状態でお届け。生成AIを「学ぶ」負担を最小限に抑え、日常業務ですぐに活用できます。',
+      image: '/images/easy.png'
     },
     {
       icon: 'ri-brain-line',
