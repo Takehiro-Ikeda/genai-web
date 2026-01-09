@@ -174,7 +174,6 @@ export default function SeminarOverviewPage() {
             生成AIを<br />「仕事の相棒」にする
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 font-light max-w-3xl mx-auto">
-            実践的生成AI活用セミナー<br />
             生成AIの動作原理、生成AIを効果的に活用する思考法、具体的な生成AIテクニック、業務への落とし込みまで体系的に学ぶことができます。
           </p>
           <div className="flex justify-center">
@@ -191,9 +190,9 @@ export default function SeminarOverviewPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">セミナーのコンセプト</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              生成AIは一部の人の武器ではなく、<br />
-              使うか使わないかで「仕事のスピード・質」に決定的な差が出る時代。<br />
-              <strong className="text-teal-600">生成AIを「仕事の相棒」にすることがゴール</strong>です。
+              生成AIは、一部の専門家だけの道具ではありません。<br />
+              正しく使えば、誰にとっても「仕事の相棒」になります。<br />
+              本セミナーでは、考え方・使い方・業務への落とし込みまでを体系的に学び、生成AIを“明日から使える存在”に変えることをゴールにしています。
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
