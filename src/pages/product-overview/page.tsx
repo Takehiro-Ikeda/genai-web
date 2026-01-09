@@ -178,8 +178,7 @@ export default function ProductOverviewPage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">こんな組織に最適</h2>
-            <p className="text-xl text-gray-600">セキュリティ要件が厳しい業界での導入実績</p>
+            <p className="text-xl text-gray-600">情報管理やセキュリティを重視しながら、生成AIを安心して業務に活用したい組織に最適です。</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-5xl mx-auto">
             {targetIndustries.map((industry, index) => (
@@ -364,7 +363,7 @@ export default function ProductOverviewPage() {
             <div>
               <h4 className="text-white font-bold mb-4 text-sm">お問い合わせ</h4>
               <ul className="space-y-3">
-                <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors text-sm cursor-pointer">お問い合わせフォーム</Link></li>
+                <li><Link to="/contact?type=poc" className="text-gray-400 hover:text-white transition-colors text-sm cursor-pointer">お問い合わせフォーム</Link></li>
                 <li><button onClick={handleTopClick} className="text-gray-400 hover:text-white transition-colors text-sm cursor-pointer">TOP</button></li>
               </ul>
             </div>
