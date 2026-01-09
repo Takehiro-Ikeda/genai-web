@@ -28,9 +28,9 @@ export default function HomePage() {
     },
     {
       name: '実践的生成AI活用セミナー',
-      type: '教育・トレーニング',
-      description: 'ビジネスで即活用できる生成AIの実践的なノウハウを習得。経験豊富な講師陣が、生成AIの原理を丁寧に解説し、生成AI導入から運用まで徹底サポートします。',
-      image: 'https://readdy.ai/api/search-image?query=Professional%20business%20seminar%20training%20session%20with%20people%20learning%20about%20AI%20technology%20in%20modern%20conference%20room%20with%20presentation%20screens%20and%20collaborative%20atmosphere%20in%20clean%20minimalist%20design%20with%20soft%20gradient%20background&width=400&height=400&seq=102&orientation=squarish',
+      type: 'AI人材育成',
+      description: '生成AIを「使える人」を社内に育てる実践型セミナー。自分専用のAIパートナーとともに、生成AIを業務で継続的に活用できる力を養成します。',
+      image: '/images/seminar_scene.jpg',
       price: 'セミナー概要',
       link: '/seminar-overview'
     }
