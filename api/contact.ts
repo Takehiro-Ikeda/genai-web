@@ -3,7 +3,7 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const TO = process.env.CONTACT_TO_EMAIL || "ikeda@closip.co.jp";
+const TO = process.env.CONTACT_TO_EMAIL || "genai@closip.co.jp";
 const FROM = process.env.CONTACT_FROM_EMAIL || "no-reply@resend.dev";
 
 function isWeekday(dateStr: string) {
