@@ -22,7 +22,7 @@ export default function HomePage() {
       name: 'オンプレミス生成AIサーバー',
       type: 'AIインフラ構築',
       description: '自社環境で安全に運用できる生成AIシステムを構築。データの機密性を保ちながら、最先端のAI技術を活用できます。',
-      image: 'https://closip.ai/img/SapiaBox_in_office.png',
+      image: 'https://readdy.ai/api/search-image?query=Modern%20on-premise%20AI%20server%20infrastructure%20with%20secure%20data%20center%20environment%20showing%20advanced%20computing%20hardware%20and%20neural%20network%20visualization%20in%20professional%20minimalist%20design%20with%20soft%20gradient%20background%20emphasizing%20security%20and%20enterprise%20technology&width=400&height=400&seq=101&orientation=squarish',
       price: '製品概要',
       link: '/product-overview'
     },
