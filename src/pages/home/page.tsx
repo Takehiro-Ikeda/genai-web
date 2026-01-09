@@ -22,7 +22,7 @@ export default function HomePage() {
       name: 'オンプレミス生成AIサーバー',
       type: 'AIインフラ構築',
       description: '自社環境で安全に運用できる生成AIシステムを構築。データの機密性を保ちながら、最先端のAI技術を活用できます。',
-      image: 'https://closip.ai/img/SapiaBox_in_office.png',
+      image: 'https://closip.ai/img/SapiaBox_in_office.jpg',
       price: '製品概要',
       link: '/product-overview'
     },
