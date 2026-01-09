@@ -120,8 +120,8 @@ export default function ContactPage() {
       desc: '機密データを扱う環境でも安心して使える生成AI活用をご提案します。',
     },
     seminar: {
-      title: '法人向け｜オンライン無料生成AIセミナー（60分）お申し込み',
-      desc: 'Google Meet開催（closipが発行）。Meetが利用できない場合は備考にご記入ください。平日限定です。',
+      title: '法人向け｜オンライン体験セミナー（無料、60分）お申し込み',
+      desc: 'Google Meet にて開催（closipが発行）。Google Meet がご利用いただけない場合は備考にご記入ください。',
     },
   };
 

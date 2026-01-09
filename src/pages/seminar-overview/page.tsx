@@ -351,7 +351,7 @@ export default function SeminarOverviewPage() {
       <section id="free-seminar" className="py-24 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6">
           <div className="bg-gradient-to-br from-amber-50 to-white rounded-3xl p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">まずはオンライン体験セミナー（無料）を体験</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">オンライン体験セミナー（無料）</h2>
             <div className="max-w-2xl mx-auto mb-8">
               <ul className="space-y-3 text-left">
                 <li className="flex items-start gap-3">
