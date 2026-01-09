@@ -151,7 +151,7 @@ export default function SeminarOverviewPage() {
             <button onClick={() => handleNavClick('#concept')} className="text-sm font-medium text-gray-800 transition-colors hover:text-teal-600 cursor-pointer">コンセプト</button>
             <button onClick={() => handleNavClick('#program')} className="text-sm font-medium text-gray-800 transition-colors hover:text-teal-600 cursor-pointer">プログラム</button>
             <button onClick={() => handleNavClick('#results')} className="text-sm font-medium text-gray-800 transition-colors hover:text-teal-600 cursor-pointer">導入効果</button>
-            <Link to="/contact" className="bg-teal-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-teal-700 transition-colors whitespace-nowrap cursor-pointer">お問い合わせ</Link>
+            <Link to="/contact?type=seminar" className="bg-teal-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-teal-700 transition-colors whitespace-nowrap cursor-pointer">体験セミナーについて相談する</Link>
           </div>
         </div>
       </nav>
@@ -175,7 +175,7 @@ export default function SeminarOverviewPage() {
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 font-light max-w-3xl mx-auto">
             実践的生成AI活用セミナー<br />
-            考え方・使い方・業務への落とし込みまで体系的に学ぶ
+            生成AIの動作原理、生成AIを効果的に活用する思考法、具体的な生成AIテクニック、業務への落とし込みまで体系的に学ぶことができます。
           </p>
           <div className="flex justify-center">
             <a href="#free-seminar" className="inline-block bg-teal-600 text-white px-10 py-4 rounded-full text-base font-semibold hover:bg-teal-700 transition-all shadow-lg whitespace-nowrap cursor-pointer">
