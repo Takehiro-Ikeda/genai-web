@@ -29,7 +29,7 @@ export default function HomePage() {
     {
       name: '実践的生成AI活用セミナー',
       type: '教育・トレーニング',
-      description: 'ビジネスで即活用できる生成AIの実践的なノウハウを習得。経験豊富な講師陣が、導入から運用まで徹底サポートします。',
+      description: 'ビジネスで即活用できる生成AIの実践的なノウハウを習得。経験豊富な講師陣が、生成AIの原理を丁寧に解説し、生成AI導入から運用まで徹底サポートします。',
       image: 'https://readdy.ai/api/search-image?query=Professional%20business%20seminar%20training%20session%20with%20people%20learning%20about%20AI%20technology%20in%20modern%20conference%20room%20with%20presentation%20screens%20and%20collaborative%20atmosphere%20in%20clean%20minimalist%20design%20with%20soft%20gradient%20background&width=400&height=400&seq=102&orientation=squarish',
       price: 'セミナー概要',
       link: '/seminar-overview'
@@ -114,8 +114,8 @@ export default function HomePage() {
           <div className="hidden md:flex items-center gap-8">
             <button onClick={handleTopClick} className={`text-sm font-medium transition-colors hover:text-teal-600 cursor-pointer whitespace-nowrap ${isScrolled ? 'text-gray-800' : 'text-white'}`}>TOP</button>
             <a href="#products" className={`text-sm font-medium transition-colors hover:text-teal-600 whitespace-nowrap ${isScrolled ? 'text-gray-800' : 'text-white'}`}>サービス</a>
-            <a href="#features" className={`text-sm font-medium transition-colors hover:text-teal-600 whitespace-nowrap ${isScrolled ? 'text-gray-800' : 'text-white'}`}>特徴</a>
-            <a href="#cases" className={`text-sm font-medium transition-colors hover:text-teal-600 whitespace-nowrap ${isScrolled ? 'text-gray-800' : 'text-white'}`}>受講事例</a>
+            <a href="#features" className={`text-sm font-medium transition-colors hover:text-teal-600 whitespace-nowrap ${isScrolled ? 'text-gray-800' : 'text-white'}`}>なぜ私たちか</a>
+            <a href="#cases" className={`text-sm font-medium transition-colors hover:text-teal-600 whitespace-nowrap ${isScrolled ? 'text-gray-800' : 'text-white'}`}>AIセミナー受講事例</a>
             <Link to="/contact" className="bg-teal-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-teal-700 transition-colors whitespace-nowrap cursor-pointer">お問い合わせ</Link>
           </div>
         </div>
