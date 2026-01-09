@@ -38,16 +38,16 @@ export default function ProductOverviewPage() {
     },
     {
       icon: 'ri-time-line',
-      title: '業務負荷の増大',
-      description: '反復作業・書類処理・季節業務が集中。人手不足、残業増加、ヒューマンエラーの原因に。'
+      title: '生成AIを学ぶ時間が無い',
+      description: 'AIを使いたいが、日々の業務に追われ、新しいツールの検証や生成AIの導入・定着にまで手が回らない。'
     }
   ];
 
   const features = [
     {
       icon: 'ri-shield-check-line',
-      title: '完全オンプレミス',
-      description: 'データは一切外部に出ない。インターネットから遮断して処理可能。情報漏洩リスクを極限まで低減。',
+      title: '安全',
+      description: '生成AIを自社内環境で運用するため、機密データを社外に出すことなく活用できます。<br />セキュリティ要件が厳しい組織でも安心して導入可能です。',
       image: 'https://readdy.ai/api/search-image?query=Secure%20on-premise%20server%20infrastructure%20with%20data%20protection%20shield%20and%20locked%20network%20showing%20complete%20data%20isolation%20in%20professional%20minimalist%20design%20with%20soft%20beige%20gradient%20background%20emphasizing%20maximum%20security%20and%20confidentiality%20for%20sensitive%20business%20information&width=600&height=400&seq=601&orientation=landscape'
     },
     {
@@ -221,7 +221,7 @@ export default function ProductOverviewPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">3つの特徴</h2>
-            <p className="text-xl text-gray-600">安全に、確実に、業務で使える</p>
+            <p className="text-xl text-gray-600">安全・簡単・高い費用対効果</p>
           </div>
           <div className="space-y-16">
             {features.map((feature, index) => (
