@@ -48,7 +48,7 @@ export default function ProductOverviewPage() {
       icon: 'ri-shield-check-line',
       title: '安全',
       description: '生成AIを自社内環境で運用するため、機密データを社外に出すことなく活用できます。セキュリティ要件が厳しい組織でも安心して導入可能です。',
-      image: 'https://readdy.ai/api/search-image?query=Secure%20on-premise%20server%20infrastructure%20with%20data%20protection%20shield%20and%20locked%20network%20showing%20complete%20data%20isolation%20in%20professional%20minimalist%20design%20with%20soft%20beige%20gradient%20background%20emphasizing%20maximum%20security%20and%20confidentiality%20for%20sensitive%20business%20information&width=600&height=400&seq=601&orientation=landscape'
+      image: '/images/secure.jpg'
     },
     {
       icon: 'ri-server-line',
