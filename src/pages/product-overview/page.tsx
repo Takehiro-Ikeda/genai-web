@@ -310,10 +310,10 @@ export default function ProductOverviewPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact"
+                to="/contact?type=poc"
                 className="inline-block bg-white text-gray-900 px-12 py-4 rounded-full text-base font-semibold hover:bg-gray-100 transition-all shadow-lg whitespace-nowrap cursor-pointer"
               >
-                無料PoCを申し込む
+                オンプレ生成AIサーバについて問い合わせ
               </Link>
             </div>
           </div>
@@ -330,12 +330,6 @@ export default function ProductOverviewPage() {
           <p className="text-2xl font-semibold text-teal-400 mb-12">
             オフィス常駐型「AI社員」が、あなたの組織の業務を変えます。
           </p>
-          <Link 
-            to="/contact"
-            className="inline-block bg-white text-gray-900 px-12 py-4 rounded-full text-base font-semibold hover:bg-gray-100 transition-all shadow-lg whitespace-nowrap cursor-pointer"
-          >
-            お問い合わせ
-          </Link>
         </div>
       </section>
 
