@@ -146,7 +146,7 @@ export default function ProductOverviewPage() {
       <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 w-full h-full">
           <img 
-            src="https://readdy.ai/api/search-image?query=Modern%20secure%20office%20environment%20with%20on-premise%20AI%20server%20infrastructure%20showing%20professional%20business%20setting%20with%20advanced%20computing%20technology%20and%20data%20protection%20in%20clean%20minimalist%20design%20with%20soft%20natural%20lighting%20emphasizing%20enterprise%20security%20and%20innovation%20for%20sensitive%20data%20handling&width=1920&height=1080&seq=600&orientation=landscape" 
+            src="/images/SapiaBox_in_office3.png" 
             alt="AI Infrastructure" 
             className="w-full h-full object-cover object-top"
           />
