@@ -121,7 +121,7 @@ export default function ContactPage() {
     },
     seminar: {
       title: '法人向け｜オンライン体験セミナー（無料、60分）お申し込み',
-      desc: 'Google Meet にて開催（closipが発行）。Google Meet がご利用いただけない場合は備考にご記入ください。',
+      desc: 'Google Meet にて開催（closipが発行）。Google Meet がご利用いただけない場合は「お問合わせ内容」にご記入ください。',
     },
   };
 
@@ -299,13 +299,13 @@ export default function ContactPage() {
               onClick={() => handleNavClick('#features')}
               className="text-sm font-medium text-gray-800 transition-colors hover:text-teal-600 cursor-pointer"
             >
-              特徴
+              なぜ私たちか
             </button>
             <button
               onClick={() => handleNavClick('#cases')}
               className="text-sm font-medium text-gray-800 transition-colors hover:text-teal-600 cursor-pointer"
             >
-              受講事例
+              AIセミナー受講事例
             </button>
             <Link
               to="/contact"
