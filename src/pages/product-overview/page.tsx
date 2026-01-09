@@ -34,7 +34,7 @@ export default function ProductOverviewPage() {
     {
       icon: 'ri-shield-cross-line',
       title: 'セキュリティ制約',
-      description: '<p>機密データをクラウドに預けられない。</p><p>厳しい情報管理ルールが導入の壁になっている。</p>'
+      description: '機密データをクラウドに預けられない。厳しい情報管理ルールが導入の壁になっている。'
     },
     {
       icon: 'ri-time-line',
@@ -52,14 +52,14 @@ export default function ProductOverviewPage() {
     },
     {
       icon: 'ri-server-line',
-      title: '高性能 × コンパクト',
-      description: '電源を入れるだけで利用可能。専用サーバーとしてオフィスに設置。高性能でも設置しやすいサイズ感。',
+      title: '簡単',
+      description: 'AIに実行させたい業務は closip社が事前に開発し、すぐに使える状態でお届け。生成AIを「学ぶ」負担を最小限に抑え、日常業務ですぐに活用できます',
       image: 'https://readdy.ai/api/search-image?query=Compact%20high-performance%20AI%20server%20unit%20in%20modern%20office%20environment%20showing%20sleek%20design%20and%20easy%20installation%20with%20plug-and-play%20setup%20in%20professional%20minimalist%20beige%20aesthetic%20emphasizing%20convenience%20and%20powerful%20computing%20capability%20in%20small%20form%20factor&width=600&height=400&seq=602&orientation=landscape'
     },
     {
       icon: 'ri-brain-line',
-      title: '組織専用AIに進化',
-      description: '組織独自のルール・マニュアル・過去資料を学習。判断基準をコピーし、業務に最適化。「その会社専用のAI社員」として機能。',
+      title: '高い費用対効果',
+      description: '一度導入すれば、利用人数が増えてもコストは固定。クラウド型の従量課金と違い、組織全体で生成AIを安心して使い続けられます。',
       image: 'https://readdy.ai/api/search-image?query=AI%20learning%20from%20company%20documents%20and%20manuals%20showing%20customization%20and%20adaptation%20to%20organization-specific%20rules%20in%20professional%20workspace%20with%20neural%20network%20visualization%20in%20minimalist%20beige%20design%20emphasizing%20personalized%20AI%20employee%20training%20and%20business%20optimization&width=600&height=400&seq=603&orientation=landscape'
     }
   ];
