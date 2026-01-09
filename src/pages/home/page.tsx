@@ -19,9 +19,9 @@ export default function HomePage() {
 
   const products = [
     {
-      name: 'オンプレミス生成AIサーバー',
-      type: 'AIインフラ構築',
-      description: '自社環境で安全に運用できる生成AIシステムを構築。データの機密性を保ちながら、最先端のAI技術を活用できます。',
+      name: 'オンプレミス生成AIサーバー: SapiaBox',
+      type: '社内専用 生成AIサーバ',
+      description: '机におけるコンパクトサイズで、自社内に閉じて安全に運用できる生成AIシステムを提供。クラウドにデータを出さず、安心して生成AIをご利用いただけます。',
       image: '/images/SapiaBox_in_office2.jpg',
       price: '製品概要',
       link: '/product-overview'
