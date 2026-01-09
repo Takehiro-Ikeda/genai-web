@@ -60,7 +60,7 @@ export default function ProductOverviewPage() {
       icon: 'ri-brain-line',
       title: '高い費用対効果',
       description: '一度導入すれば、利用人数が増えてもコストは固定。クラウド型の従量課金と違い、組織全体で生成AIを安心して使い続けられます。',
-      image: 'https://readdy.ai/api/search-image?query=AI%20learning%20from%20company%20documents%20and%20manuals%20showing%20customization%20and%20adaptation%20to%20organization-specific%20rules%20in%20professional%20workspace%20with%20neural%20network%20visualization%20in%20minimalist%20beige%20design%20emphasizing%20personalized%20AI%20employee%20training%20and%20business%20optimization&width=600&height=400&seq=603&orientation=landscape'
+      image: '/images/lowcost.jpg'
     }
   ];
 
