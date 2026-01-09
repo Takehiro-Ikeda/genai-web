@@ -160,7 +160,7 @@ export default function SeminarOverviewPage() {
       <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 w-full h-full">
           <img 
-            src="/img/seminar_scene.jpg" 
+            src="/images/seminar_scene.jpg" 
             alt="Seminar" 
             className="w-full h-full object-cover object-top"
           />
