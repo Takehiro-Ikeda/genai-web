@@ -179,7 +179,7 @@ export default function SeminarOverviewPage() {
           </p>
           <div className="flex justify-center">
             <a href="#free-seminar" className="inline-block bg-teal-600 text-white px-10 py-4 rounded-full text-base font-semibold hover:bg-teal-700 transition-all shadow-lg whitespace-nowrap cursor-pointer">
-              体験セミナーについて相談する
+              無料セミナーを見る
             </a>
           </div>
         </div>
