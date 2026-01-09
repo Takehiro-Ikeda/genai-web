@@ -192,7 +192,8 @@ export default function SeminarOverviewPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               生成AIは、一部の専門家だけの道具ではありません。<br />
               正しく使えば、誰にとっても「仕事の相棒」になります。<br />
-              本セミナーでは、考え方・使い方・業務への落とし込みまでを体系的に学び、生成AIを“明日から使える存在”に変えることをゴールにしています。
+              本セミナーでは、考え方・使い方・業務への落とし込みまでを体系的に学び、<br />
+              生成AIを“明日から使える存在”に変えることをゴールにしています。
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -350,15 +351,12 @@ export default function SeminarOverviewPage() {
       <section id="free-seminar" className="py-24 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6">
           <div className="bg-gradient-to-br from-amber-50 to-white rounded-3xl p-12 text-center">
-            <div className="mb-6">
-              <span className="bg-amber-500 text-white px-6 py-3 rounded-full text-base font-bold">無料セミナーも開催中</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">まずは無料セミナーで体験</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">まずはオンライン体験セミナー（無料）を体験</h2>
             <div className="max-w-2xl mx-auto mb-8">
               <ul className="space-y-3 text-left">
                 <li className="flex items-start gap-3">
                   <i className="ri-check-line text-xl text-amber-500 flex-shrink-0 mt-1"></i>
-                  <span className="text-gray-700">有料セミナーの全体像を短時間で体験</span>
+                  <span className="text-gray-700">有料セミナーの全体像を1時間で体験</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <i className="ri-check-line text-xl text-amber-500 flex-shrink-0 mt-1"></i>
@@ -374,7 +372,7 @@ export default function SeminarOverviewPage() {
               to="/contact?type=seminar"
               className="inline-block bg-amber-500 text-white px-12 py-4 rounded-full text-base font-semibold hover:bg-amber-600 transition-all shadow-lg whitespace-nowrap cursor-pointer"
             >
-              オンライン無料セミナーの申し込み
+              オンライン体験セミナー（無料）の申し込み
             </Link>
           </div>
         </div>
