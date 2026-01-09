@@ -164,11 +164,8 @@ export default function ProductOverviewPage() {
             <strong className="font-bold">SapiaBox</strong>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#features" className="inline-block bg-white text-gray-900 px-10 py-4 rounded-full text-base font-semibold hover:bg-gray-100 transition-all shadow-lg whitespace-nowrap cursor-pointer">
-              詳細を見る
-            </a>
             <Link to="/contact?type=poc" className="inline-block bg-teal-600 text-white px-10 py-4 rounded-full text-base font-semibold hover:bg-teal-700 transition-all shadow-lg whitespace-nowrap cursor-pointer">
-              オンプレサーバについて問い合わせ
+              オンプレ生成AIサーバについて問い合わせ
             </Link>
           </div>
         </div>
