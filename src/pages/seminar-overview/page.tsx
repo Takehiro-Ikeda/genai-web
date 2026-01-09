@@ -160,7 +160,7 @@ export default function SeminarOverviewPage() {
       <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 w-full h-full">
           <img 
-            src="https://readdy.ai/api/search-image?query=Professional%20business%20seminar%20training%20session%20with%20diverse%20group%20of%20professionals%20learning%20about%20AI%20technology%20in%20modern%20bright%20conference%20room%20with%20presentation%20screens%20collaborative%20atmosphere%20and%20engaged%20participants%20in%20clean%20minimalist%20design%20with%20soft%20natural%20lighting%20emphasizing%20education%20and%20professional%20development&width=1920&height=1080&seq=700&orientation=landscape" 
+            src="/img/seminar_scene.jpg" 
             alt="Seminar" 
             className="w-full h-full object-cover object-top"
           />
