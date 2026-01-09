@@ -388,12 +388,6 @@ export default function SeminarOverviewPage() {
           <p className="text-2xl font-semibold text-teal-400 mb-12">
             次に変わるのは、あなたのチーム。
           </p>
-          <Link 
-            to="/contact"
-            className="inline-block bg-white text-gray-900 px-12 py-4 rounded-full text-base font-semibold hover:bg-gray-100 transition-all shadow-lg whitespace-nowrap cursor-pointer"
-          >
-            お問い合わせ
-          </Link>
         </div>
       </section>
 
