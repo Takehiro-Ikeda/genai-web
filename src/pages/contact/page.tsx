@@ -120,8 +120,8 @@ export default function ContactPage() {
       desc: '機密データを扱う環境でも安心して使える生成AI活用をご提案します。',
     },
     seminar: {
-      title: '法人向け｜オンライン体験セミナー（無料、60分）お申し込み',
-      desc: 'Google Meet にて開催（closipが発行）。Google Meet がご利用いただけない場合は「お問合わせ内容」にご記入ください。',
+      title: '法人向け｜体験セミナー（無料、60分）お申し込み',
+      desc: '有料セミナーは対面限定のため、体験セミナーも原則対面とさせていただきます。オンラインをご希望の場合には「お問合わせ内容」にご記入ください。',
     },
   };
 
@@ -620,7 +620,7 @@ export default function ContactPage() {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent outline-none transition-all resize-none text-sm"
                   placeholder={
                     type === 'seminar'
-                      ? 'Google Meetが利用できない場合など、補足があればご記入ください（2000文字以内）'
+                      ? 'オンラインをご希望の場合には、その旨と利用可能オンラインツールをご記入ください（2000文字以内）'
                       : 'お問い合わせ内容をご記入ください（2000文字以内）'
                   }
                 />
