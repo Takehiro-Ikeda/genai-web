@@ -351,7 +351,8 @@ export default function SeminarOverviewPage() {
       <section id="free-seminar" className="py-24 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6">
           <div className="bg-gradient-to-br from-amber-50 to-white rounded-3xl p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">オンライン体験セミナー（無料）</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">体験セミナー（無料）</h2>
+            ※有料セミナーは、対面限定となるため、体験セミナーも原則対面とさせていただきます。
             <div className="max-w-2xl mx-auto mb-8">
               <ul className="space-y-3 text-left">
                 <li className="flex items-start gap-3">
@@ -372,7 +373,7 @@ export default function SeminarOverviewPage() {
               to="/contact?type=seminar"
               className="inline-block bg-amber-500 text-white px-12 py-4 rounded-full text-base font-semibold hover:bg-amber-600 transition-all shadow-lg whitespace-nowrap cursor-pointer"
             >
-              オンライン体験セミナー（無料）の申し込み
+              体験セミナー（無料）の申し込み
             </Link>
           </div>
         </div>
