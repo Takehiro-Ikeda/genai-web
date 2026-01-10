@@ -352,7 +352,7 @@ export default function SeminarOverviewPage() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="bg-gradient-to-br from-amber-50 to-white rounded-3xl p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">体験セミナー（無料）</h2>
-            ※有料セミナーは、対面限定となるため、体験セミナーも原則対面とさせていただきます。
+            ※有料セミナーは、対面限定となるため、体験セミナーも原則対面とさせていただきます。<br />
             <div className="max-w-2xl mx-auto mb-8">
               <ul className="space-y-3 text-left">
                 <li className="flex items-start gap-3">
