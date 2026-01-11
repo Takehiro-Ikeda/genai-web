@@ -186,7 +186,6 @@ export default function HomePage() {
       <section id="features" className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-start justify-between mb-16">
-            <span className="border border-white/30 text-white px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap">特徴・メリット</span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-2xl text-right">
               なぜ私たちが選ばれるのか
             </h2>
