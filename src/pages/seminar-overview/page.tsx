@@ -22,7 +22,7 @@ import {
 /**
  * 実践的生成AI活用セミナー紹介ページ
  * * アップデート内容:
- * 1. ヒーローセクションの説明文を句点で改行
+ * 1. ナビゲーションの「TOP」を「HOME」に変更し、リンク先を https://closip.ai に設定
  */
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,10 +37,6 @@ export default function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const handleTopClick = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   const handleNavClick = (hash: string) => {
     const element = document.querySelector(hash);
@@ -58,6 +54,7 @@ export default function App() {
     }
   };
 
+  const homeLink = "https://closip.ai";
   const ctaLink = "https://closip.ai/contact?type=seminar";
 
   const reasons = [
@@ -113,11 +110,12 @@ export default function App() {
       {/* Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <button onClick={handleTopClick} className="flex items-center group transition-transform hover:scale-105 active:scale-95">
+          <a href={homeLink} className="flex items-center group transition-transform hover:scale-105 active:scale-95">
             <img src="https://static.readdy.ai/image/f4a766a06f5c0ff04be2eaff427d3d8f/9581adfe46f6ae6c8a22bdfb808cc576.png" alt="Logo" className="h-8" />
-          </button>
+          </a>
           <div className="hidden md:flex items-center gap-10">
-            <button onClick={handleTopClick} className="text-sm font-semibold hover:text-teal-600 transition-colors">TOP</button>
+            {/* 修正箇所: TOP -> HOME、リンク先を closip.ai に変更 */}
+            <a href={homeLink} className="text-sm font-semibold hover:text-teal-600 transition-colors">HOME</a>
             <button onClick={() => handleNavClick('#concept')} className="text-sm font-semibold hover:text-teal-600 transition-colors">コンセプト</button>
             <button onClick={() => handleNavClick('#program')} className="text-sm font-semibold hover:text-teal-600 transition-colors">プログラム</button>
             <button onClick={() => handleNavClick('#results')} className="text-sm font-semibold hover:text-teal-600 transition-colors">導入効果</button>
@@ -145,13 +143,12 @@ export default function App() {
         <div className="relative z-20 text-center px-6 max-w-5xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white px-5 py-2 rounded-full text-sm font-medium mb-8 animate-fade-in-up">
             <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-            <span>満足度99.2%の実踐的カリキュラム</span>
+            <span>満足度99.2%の実践的カリキュラム</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-8 leading-[1.15] animate-fade-in-up delay-100">
             生成AIを、<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-emerald-300">「仕事の相棒」</span>に変える
           </h1>
-          {/* 修正箇所: 句点での改行を追加 */}
           <p className="text-lg md:text-xl text-slate-200 mb-10 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200">
             原理の理解から具体的なプロンプト技術、業務への組み込みまでを12時間で習得。<br />
             あなたのチームをAIを使いこなす次世代組織へとアップデートします。
