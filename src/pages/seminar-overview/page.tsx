@@ -22,7 +22,7 @@ import {
 /**
  * 実践的生成AI活用セミナー紹介ページ
  * * アップデート内容:
- * 1. フッター最下部のコピーライト、プライバシーポリシー、特定商取引法の表記を削除
+ * 1. ヒーローセクションの説明文を句点で改行
  */
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -145,14 +145,15 @@ export default function App() {
         <div className="relative z-20 text-center px-6 max-w-5xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white px-5 py-2 rounded-full text-sm font-medium mb-8 animate-fade-in-up">
             <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-            <span>満足度99.2%の実践的カリキュラム</span>
+            <span>満足度99.2%の実踐的カリキュラム</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-8 leading-[1.15] animate-fade-in-up delay-100">
             生成AIを、<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-emerald-300">「仕事の相棒」</span>に変える
           </h1>
+          {/* 修正箇所: 句点での改行を追加 */}
           <p className="text-lg md:text-xl text-slate-200 mb-10 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200">
-            原理の理解から具体的なプロンプト技術、業務への組み込みまでを12時間で習得。
+            原理の理解から具体的なプロンプト技術、業務への組み込みまでを12時間で習得。<br />
             あなたのチームをAIを使いこなす次世代組織へとアップデートします。
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 animate-fade-in-up delay-300">
@@ -389,7 +390,7 @@ export default function App() {
 
             <div className="w-full h-full min-h-[400px] rounded-3xl overflow-hidden shadow-2xl shadow-slate-200 border-4 border-white">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.391626084474!2d139.7562!3d35.6667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188be9648939c3%3A0x280e816a1b9c9f2b!2z44CSMTA1LTAwMDQg5p2x5Lqs6YO95riv5Yy65paw5qmL77yR5LiB55uu77yR77yS4oiS77yZ!5e0!3m2!1sja!2sjp!4v1711200000000!5m2!1sja!2sjp" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.391626084474!2d139.75624787672164!3d35.66674757259114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188be9648939c3%3A0x280e816a1b9c9f2b!2z44CSMTA1LTAwMDQg5p2x5Lqs6YO95riv5Yy65paw5qmL77yR5LiB55uu77yR77yS4oiS77yZ!5e0!3m2!1sja!2sjp!4v1711200000000!5m2!1sja!2sjp" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0, minHeight: '400px' }} 
