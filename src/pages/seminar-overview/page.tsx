@@ -21,11 +21,8 @@ import {
 
 /**
  * 実践的生成AI活用セミナー紹介ページ
- * * 修正点:
- * 1. 「仕事の相棒」の色を元の緑色(Teal/Emerald)に
- * 2. ビル名を「新橋プレイス」に変更
- * 3. マップピンを正確な住所「東京都港区新橋1-12-9」に設定
- * 4. 予約リンクをすべて「https://closip.ai/contact?type=seminar」に統一
+ * * アップデート内容:
+ * 1. フッター最下部のコピーライト、プライバシーポリシー、特定商取引法の表記を削除
  */
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,7 +45,7 @@ export default function App() {
   const handleNavClick = (hash: string) => {
     const element = document.querySelector(hash);
     if (element) {
-      const offset = 80;
+      const offset = 80; // ヘッダーの高さ分をオフセット
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -159,13 +156,13 @@ export default function App() {
             あなたのチームをAIを使いこなす次世代組織へとアップデートします。
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 animate-fade-in-up delay-300">
-            <a 
-              href={ctaLink}
+            <button 
+              onClick={() => handleNavClick('#free-seminar')}
               className="group bg-teal-500 hover:bg-teal-400 text-white px-10 py-5 rounded-full text-lg font-bold transition-all shadow-xl hover:shadow-teal-500/25 flex items-center gap-2"
             >
               まずは無料体験セミナーへ
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </button>
             <button onClick={() => handleNavClick('#program')} className="text-white hover:text-teal-300 px-6 py-4 font-semibold transition-colors">
               プログラム詳細を見る
             </button>
@@ -337,7 +334,7 @@ export default function App() {
               <span className="bg-teal-500 text-white px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 inline-block">Free Trial</span>
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">無料体験セミナー開催中</h2>
               <p className="text-slate-300 text-lg mb-10 leading-relaxed max-w-2xl mx-auto">
-                まずは1時間で、有料セミナーのエッセンスを体験してください。
+                まずは1時間で、有料セミナーのエッセンスを体験してください。<br />
                 実際の活用イメージが湧き、「自社に必要か」を判断できる材料が手に入ります。
               </p>
               
@@ -384,16 +381,15 @@ export default function App() {
                 </div>
 
                 <p className="text-slate-500 text-sm leading-relaxed border-l-2 border-teal-500 pl-4">
-                  ※有料セミナーは原則対面形式で行います。<br />
-                  ※貴社オフィスでの開催をご希望の場合は、お申し込み時にその旨をお伝えください。
+                  ※有料セミナーは原則対面形式（貴社オフィス）で行います。<br />
+                  ※無料体験セミナーも貴社オフィスでの開催を前提としておりますが、弊社セミナールームやオンラインでの開催をご希望の場合は、お申し込み時にその旨をお伝えください。
                 </p>
               </div>
             </div>
 
             <div className="w-full h-full min-h-[400px] rounded-3xl overflow-hidden shadow-2xl shadow-slate-200 border-4 border-white">
-              {/* 指定住所「東京都港区新橋1-12-9」にピンを打ったマップ */}
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.3916!2d139.7562!3d35.6667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188be9648939c3%3A0x280e816a1b9c9f2b!2z44CSMTA1LTAwMDQg5p2x5Lqs6YO95riv5Yy65paw5qmL77yR5LiB55uu77yR77yS4oiS77yZ!5e0!3m2!1sja!2sjp!4v1711200000000!5m2!1sja!2sjp" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.391626084474!2d139.7562!3d35.6667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188be9648939c3%3A0x280e816a1b9c9f2b!2z44CSMTA1LTAwMDQg5p2x5Lqs6YO95riv5Yy65paw5qmL77yR5LiB55uu77yR77yS4oiS77yZ!5e0!3m2!1sja!2sjp!4v1711200000000!5m2!1sja!2sjp" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0, minHeight: '400px' }} 
@@ -427,35 +423,13 @@ export default function App() {
       {/* Real Footer */}
       <footer className="bg-slate-900 text-slate-400 py-16 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-12 mb-12">
-            <div className="md:col-span-2">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-12">
+            <div className="max-w-md">
               <img src="https://static.readdy.ai/image/f4a766a06f5c0ff04be2eaff427d3d8f/9581adfe46f6ae6c8a22bdfb808cc576.png" alt="Logo" className="h-8 mb-6 brightness-0 invert" />
-              <p className="max-w-xs text-sm leading-relaxed">
+              <p className="text-sm leading-relaxed">
                 次世代のビジネススタンダードを創る、実践的生成AI研修プログラム。
                 企業の競争力をAIと共に最大化します。
               </p>
-            </div>
-            <div>
-              <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-widest">Service</h4>
-              <ul className="space-y-4 text-sm">
-                <li><a href="#product-overview" className="hover:text-teal-400 transition-colors">オンプレミスAIサーバー</a></li>
-                <li><a href="#seminar-overview" className="hover:text-teal-400 transition-colors">生成AI活用セミナー</a></li>
-                <li><a href={ctaLink} className="hover:text-teal-400 transition-colors">個別コンサルティング</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-widest">Support</h4>
-              <ul className="space-y-4 text-sm">
-                <li><a href={ctaLink} className="hover:text-teal-400 transition-colors">お問い合わせ</a></li>
-                <li><button onClick={handleTopClick} className="hover:text-teal-400 transition-colors">トップへ戻る</button></li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-8 border-t border-white/5 text-xs flex justify-between items-center">
-            <p>© 2024 AI Seminar Partners. All Rights Reserved.</p>
-            <div className="flex gap-6">
-              <a href="#" className="hover:text-white transition-colors text-sm">プライバシーポリシー</a>
-              <a href="#" className="hover:text-white transition-colors text-sm">特定商取引法に基づく表記</a>
             </div>
           </div>
         </div>
