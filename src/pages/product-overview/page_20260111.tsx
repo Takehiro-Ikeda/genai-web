@@ -132,7 +132,7 @@ export default function ProductOverviewPage() {
             <img src="https://static.readdy.ai/image/f4a766a06f5c0ff04be2eaff427d3d8f/9581adfe46f6ae6c8a22bdfb808cc576.png" alt="Logo" className="h-10" />
           </button>
           <div className="hidden md:flex items-center gap-8">
-            <button onClick={handleTopClick} className="text-sm font-medium text-gray-800 transition-colors hover:text-teal-600 cursor-pointer">HOME</button>
+            <button onClick={handleTopClick} className="text-sm font-medium text-gray-800 transition-colors hover:text-teal-600 cursor-pointer">TOP</button>
             <button onClick={() => handleNavClick('#problems')} className="text-sm font-medium text-gray-800 transition-colors hover:text-teal-600 cursor-pointer">課題</button>
             <button onClick={() => handleNavClick('#features')} className="text-sm font-medium text-gray-800 transition-colors hover:text-teal-600 cursor-pointer">特徴</button>
             <button onClick={() => handleNavClick('#models')} className="text-sm font-medium text-gray-800 transition-colors hover:text-teal-600 cursor-pointer">活用モデル</button>
