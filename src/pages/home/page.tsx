@@ -144,7 +144,7 @@ export default function HomePage() {
           {/* Banner Image */}
           <div className="mt-12 flex justify-center">
           <img
-          src="https://drive.google.com/uc?export=view&id=1HS_APYuOQs4YgLvRZZgcMXkcqAuz2o_s"
+          src="/images/closip_study_banner.png"
           alt="生成AI実務研究会バナー"
           className="w-full max-w-5xl rounded-2xl shadow-2xl"
           />
