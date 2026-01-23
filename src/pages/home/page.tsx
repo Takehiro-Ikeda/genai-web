@@ -142,7 +142,7 @@ export default function HomePage() {
             サービスを見る
           </a>
           {/* Banner Image */}
-          <div className="mt-12 flex justify-center">
+          <div className="mt-8 flex justify-center">
             <a
               href="https://closip-genai-study.created.app/"
               target="_blank"
@@ -154,16 +154,17 @@ export default function HomePage() {
             alt="生成AI実務研究会バナー"
             className="
               w-full
-              max-w-3xl
-              md:max-w-4xl
-              rounded-2xl
-              shadow-2xl
+              max-w-xs
+              sm:max-w-sm
+              md:max-w-md
+              rounded-xl
+              shadow-lg
               hover:scale-105
               transition-transform
               duration-300
               cursor-pointer
             "
-              />
+            />
             </a>
           </div>
         </div>
