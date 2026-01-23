@@ -142,7 +142,7 @@ export default function HomePage() {
             サービスを見る
           </a>
           {/* Banner Image */}
-          <div className="mt-12 flex justify-center">
+          <div className="mt-20 flex justify-center">
             <a
               href="https://closip-genai-study.created.app/"
               target="_blank"
