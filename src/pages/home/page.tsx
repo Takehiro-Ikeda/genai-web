@@ -158,7 +158,11 @@ export default function HomePage() {
               sm:max-w-sm
               md:max-w-md
               rounded-xl
-              shadow-lg
+              shadow-xl
+              border
+              border-white
+              bg-white
+              p-2
               hover:scale-105
               transition-transform
               duration-300
