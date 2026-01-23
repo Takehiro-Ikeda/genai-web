@@ -141,6 +141,14 @@ export default function HomePage() {
           <a href="#products" className="inline-block bg-white text-gray-900 px-10 py-4 rounded-full text-base font-semibold hover:bg-gray-100 transition-all shadow-lg whitespace-nowrap cursor-pointer">
             サービスを見る
           </a>
+          {/* Banner Image */}
+          <div className="mt-12 flex justify-center">
+          <img
+          src="https://drive.google.com/file/d/1HS_APYuOQs4YgLvRZZgcMXkcqAuz2o_s/view?usp=sharing"
+          alt="生成AI実務研究会バナー"
+          className="w-full max-w-5xl rounded-2xl shadow-2xl"
+          />
+          </div>
         </div>
       </section>
 
