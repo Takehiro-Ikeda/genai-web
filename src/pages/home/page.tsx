@@ -143,11 +143,28 @@ export default function HomePage() {
           </a>
           {/* Banner Image */}
           <div className="mt-12 flex justify-center">
+            <a
+              href="https://closip-genai-study.created.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
           <img
-          src="/images/closip_study_banner.png"
-          alt="生成AI実務研究会バナー"
-          className="w-full max-w-5xl rounded-2xl shadow-2xl"
-          />
+            src="/images/closip_study_banner.png"
+            alt="生成AI実務研究会バナー"
+            className="
+              w-full
+              max-w-3xl
+              md:max-w-4xl
+              rounded-2xl
+              shadow-2xl
+              hover:scale-105
+              transition-transform
+              duration-300
+              cursor-pointer
+            "
+              />
+            </a>
           </div>
         </div>
       </section>
