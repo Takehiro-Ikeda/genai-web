@@ -81,7 +81,7 @@ export default function App() {
     {
       icon: CircleDollarSign,
       title: '助成金対象の可能性',
-      description: '「人材開発支援助成金」の対象研修となります。助成金申請のサポートもご相談ください。'
+      description: '教育訓練給付金や人材開発支援助成金などの対象となる場合があります。'
     },
     {
       icon: Headphones,
@@ -91,8 +91,8 @@ export default function App() {
   ];
 
   const steps = [
-    { step: '01', title: '生成AIの基礎と実践事例', duration: '2h', desc: 'AIの基本概念から、国内外のビジネス活用事例まで、全体像を把握します。' },
-    { step: '02', title: 'AIを使いこなす準備', duration: '2h', desc: 'AIへの命令（プロンプト）の基本構造と、独自の「AIパートナー」を作成します。' },
+    { step: '01', title: '生成AIの基礎と実践事例', duration: '2h', desc: 'AIの基本概念から、国内外の驚くべきビジネス活用事例まで、全体像を把握します。' },
+    { step: '02', title: 'AIを使いこなす準備', duration: '2h', desc: 'AIへの命令（プロンプト）の基本構造と、独自の「AIパートナー」設定を構築します。' },
     { step: '03', title: '業務活用・基礎編', duration: '2h', desc: 'メール作成、ドキュメント要約、議事録作成など、日常業務の効率化を実践。' },
     { step: '04', title: '業務活用・応用編', duration: '2h', desc: 'データ分析、企画構成、リサーチなど、より思考を必要とする業務への適用法。' },
     { step: '05', title: '業務活用・発展編', duration: '2h', desc: '複雑なワークフローの自動化や、チームでのプロンプト共有・標準化を学びます。' },
@@ -150,7 +150,7 @@ export default function App() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-emerald-300">「仕事の相棒」</span>に変える
           </h1>
           <p className="text-lg md:text-xl text-slate-200 mb-10 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200">
-            生成AIの動作原理の理解から具体的なプロンプト技術、業務への組み込みまでを12時間で習得。<br />
+            原理の理解から具体的なプロンプト技術、業務への組み込みまでを12時間で習得。<br />
             あなたのチームをAIを使いこなす次世代組織へとアップデートします。
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 animate-fade-in-up delay-300">
