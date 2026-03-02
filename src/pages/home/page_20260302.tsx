@@ -141,6 +141,36 @@ export default function HomePage() {
           <a href="#products" className="inline-block bg-white text-gray-900 px-10 py-4 rounded-full text-base font-semibold hover:bg-gray-100 transition-all shadow-lg whitespace-nowrap cursor-pointer">
             サービスを見る
           </a>
+          {/* Banner Image */}
+          <div className="mt-20 flex justify-center">
+            <a
+              href="https://closip-genai-study.created.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+          <img
+            src="/images/closip_study_banner.png"
+            alt="生成AI実務研究会バナー"
+            className="
+              w-full
+              max-w-xs
+              sm:max-w-sm
+              md:max-w-md
+              rounded-xl
+              shadow-xl
+              border
+              border-white
+              bg-white
+              p-2
+              hover:scale-105
+              transition-transform
+              duration-300
+              cursor-pointer
+            "
+            />
+            </a>
+          </div>
         </div>
       </section>
 
