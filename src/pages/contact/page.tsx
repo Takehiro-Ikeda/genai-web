@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import Header from '../../components/Header';
 
 type ContactType = 'general' | 'poc' | 'seminar';
 
@@ -53,7 +54,6 @@ export default function ContactPage() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const [isScrolled, setIsScrolled] = useState(false);
 
   // URLクエリからフォーム種別を決定
   const typeFromUrl = useMemo(() => getContactTypeFromSearch(location.search), [location.search]);
@@ -80,12 +80,6 @@ export default function ContactPage() {
   const [seminarSlot2, setSeminarSlot2] = useState('');
   const [seminarDate3, setSeminarDate3] = useState('');
   const [seminarSlot3, setSeminarSlot3] = useState('');
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // クエリ変更時：種別更新 + 先頭へスクロール（“上が出ない問題”対策）
   useEffect(() => {
@@ -269,53 +263,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white font-sans">
       {/* Navigation */}
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-white shadow-md' : 'bg-white shadow-md'
-        }`}
-      >
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center">
-            <img
-              src="https://static.readdy.ai/image/f4a766a06f5c0ff04be2eaff427d3d8f/9581adfe46f6ae6c8a22bdfb808cc576.png"
-              alt="Logo"
-              className="h-10"
-            />
-          </Link>
-          <div className="hidden md:flex items-center gap-8">
-            <button
-              onClick={handleTopClick}
-              className="text-sm font-medium text-gray-800 transition-colors hover:text-teal-600 cursor-pointer"
-            >
-              TOP
-            </button>
-            <button
-              onClick={() => handleNavClick('#products')}
-              className="text-sm font-medium text-gray-800 transition-colors hover:text-teal-600 cursor-pointer"
-            >
-              サービス
-            </button>
-            <button
-              onClick={() => handleNavClick('#features')}
-              className="text-sm font-medium text-gray-800 transition-colors hover:text-teal-600 cursor-pointer"
-            >
-              なぜ私たちか
-            </button>
-            <button
-              onClick={() => handleNavClick('#cases')}
-              className="text-sm font-medium text-gray-800 transition-colors hover:text-teal-600 cursor-pointer"
-            >
-              AIセミナー受講事例
-            </button>
-            <Link
-              to="/contact"
-              className="bg-teal-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-teal-700 transition-colors whitespace-nowrap cursor-pointer"
-            >
-              お問い合わせ
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 bg-gradient-to-br from-teal-50 to-white">

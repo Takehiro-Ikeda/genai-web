@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* コラム記事本文の組版（TOP論説・各記事で共用） */
+.prose-column p {
+  color: #374151; /* gray-700 */
+  font-size: 1.05rem;
+  line-height: 2;
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.01em;
+}
+
+.prose-column h3 {
+  font-family: ui-serif, Georgia, "Times New Roman", "YuMincho", "Hiragino Mincho ProN", serif;
+  color: #111827; /* gray-900 */
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 600;
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb; /* gray-200 */
+}
+
+.prose-column strong {
+  color: #0f766e; /* teal-700 */
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .prose-column p {
+    font-size: 1rem;
+    line-height: 1.95;
+    margin-bottom: 1.5rem;
+  }
+  .prose-column h3 {
+    font-size: 1.3rem;
+    margin-top: 2.75rem;
+  }
+}

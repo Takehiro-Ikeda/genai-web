@@ -1,17 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Header from '../../components/Header';
 
 export default function HomePage() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleTopClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -106,20 +98,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white font-sans">
       {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center">
-            <img src="https://static.readdy.ai/image/f4a766a06f5c0ff04be2eaff427d3d8f/9581adfe46f6ae6c8a22bdfb808cc576.png" alt="Logo" className="h-10" />
-          </div>
-          <div className="hidden md:flex items-center gap-8">
-            <button onClick={handleTopClick} className={`text-sm font-medium transition-colors hover:text-teal-600 cursor-pointer whitespace-nowrap ${isScrolled ? 'text-gray-800' : 'text-white'}`}>TOP</button>
-            <a href="#products" className={`text-sm font-medium transition-colors hover:text-teal-600 whitespace-nowrap ${isScrolled ? 'text-gray-800' : 'text-white'}`}>サービス</a>
-            <a href="#features" className={`text-sm font-medium transition-colors hover:text-teal-600 whitespace-nowrap ${isScrolled ? 'text-gray-800' : 'text-white'}`}>なぜ私たちか</a>
-            <a href="#cases" className={`text-sm font-medium transition-colors hover:text-teal-600 whitespace-nowrap ${isScrolled ? 'text-gray-800' : 'text-white'}`}>AIセミナー受講事例</a>
-            <Link to="/contact" className="bg-teal-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-teal-700 transition-colors whitespace-nowrap cursor-pointer">お問い合わせ</Link>
-          </div>
-        </div>
-      </nav>
+      <Header transparentTop />
 
       {/* Hero Section - Overview */}
       <section id="overview" className="relative min-h-screen flex items-center justify-center overflow-hidden">

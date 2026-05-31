@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { 
   ShieldCheck, 
   Briefcase, 
@@ -13,11 +13,11 @@ import {
   Rocket, 
   ArrowRight, 
   Clock, 
-  TrendingUp, 
   Star,
   MapPin,
   Train
 } from 'lucide-react';
+import Header from '../../components/Header';
 
 /**
  * 実践的生成AI活用セミナー紹介ページ
@@ -25,17 +25,10 @@ import {
  * 1. ナビゲーションの「TOP」を「HOME」に変更し、リンク先を https://closip.ai に設定
  */
 export default function App() {
-  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     // 初回レンダリング時にトップへ
     window.scrollTo(0, 0);
-
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const handleNavClick = (hash: string) => {
@@ -54,7 +47,6 @@ export default function App() {
     }
   };
 
-  const homeLink = "https://closip.ai";
   const ctaLink = "https://closip.ai/contact?type=seminar";
 
   const reasons = [
@@ -108,26 +100,8 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-teal-100 selection:text-teal-900">
       {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href={homeLink} className="flex items-center group transition-transform hover:scale-105 active:scale-95">
-            <img src="https://static.readdy.ai/image/f4a766a06f5c0ff04be2eaff427d3d8f/9581adfe46f6ae6c8a22bdfb808cc576.png" alt="Logo" className="h-8" />
-          </a>
-          <div className="hidden md:flex items-center gap-10">
-            {/* 修正箇所: TOP -> HOME、リンク先を closip.ai に変更 */}
-            <a href={homeLink} className="text-sm font-semibold hover:text-teal-600 transition-colors">HOME</a>
-            <button onClick={() => handleNavClick('#concept')} className="text-sm font-semibold hover:text-teal-600 transition-colors">コンセプト</button>
-            <button onClick={() => handleNavClick('#program')} className="text-sm font-semibold hover:text-teal-600 transition-colors">プログラム</button>
-            <button onClick={() => handleNavClick('#results')} className="text-sm font-semibold hover:text-teal-600 transition-colors">導入効果</button>
-            <a 
-              href={ctaLink}
-              className="bg-teal-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-teal-700 hover:shadow-lg transition-all active:scale-95"
-            >
-              無料体験を予約する
-            </a>
-          </div>
-        </div>
-      </nav>
+      {/* Navigation（共通ヘッダーに統一） */}
+      <Header transparentTop />
 
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center pt-20 overflow-hidden">

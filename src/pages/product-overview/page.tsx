@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Header from '../../components/Header';
 
 export default function ProductOverviewPage() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
 
   const handleTopClick = () => {
@@ -12,22 +12,9 @@ export default function ProductOverviewPage() {
     }, 100);
   };
 
-  const handleNavClick = (hash: string) => {
-    const element = document.querySelector(hash);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   useEffect(() => {
     // ページ読み込み時に最上部にスクロール
     window.scrollTo(0, 0);
-
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const problems = [
@@ -126,21 +113,7 @@ export default function ProductOverviewPage() {
   return (
     <div className="min-h-screen bg-white font-sans">
       {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-white shadow-md'}`}>
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <button onClick={handleTopClick} className="flex items-center cursor-pointer">
-            <img src="https://static.readdy.ai/image/f4a766a06f5c0ff04be2eaff427d3d8f/9581adfe46f6ae6c8a22bdfb808cc576.png" alt="Logo" className="h-10" />
-          </button>
-          <div className="hidden md:flex items-center gap-8">
-            <button onClick={handleTopClick} className="text-sm font-medium text-gray-800 transition-colors hover:text-teal-600 cursor-pointer">HOME</button>
-            <button onClick={() => handleNavClick('#problems')} className="text-sm font-medium text-gray-800 transition-colors hover:text-teal-600 cursor-pointer">課題</button>
-            <button onClick={() => handleNavClick('#features')} className="text-sm font-medium text-gray-800 transition-colors hover:text-teal-600 cursor-pointer">特徴</button>
-            <button onClick={() => handleNavClick('#models')} className="text-sm font-medium text-gray-800 transition-colors hover:text-teal-600 cursor-pointer">活用モデル</button>
-            <button onClick={() => handleNavClick('#poc')} className="text-sm font-medium text-gray-800 transition-colors hover:text-teal-600 cursor-pointer">導入の流れ</button>
-            <Link to="/contact" className="bg-teal-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-teal-700 transition-colors whitespace-nowrap cursor-pointer">お問い合わせ</Link>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       {/* Hero Section */}
       <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden pt-20">

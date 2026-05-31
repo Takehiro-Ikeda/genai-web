@@ -13,7 +13,6 @@ import {
   Rocket, 
   ArrowRight, 
   Clock, 
-  TrendingUp, 
   Star,
   MapPin,
   Train
