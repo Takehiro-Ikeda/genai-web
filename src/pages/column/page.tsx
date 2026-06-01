@@ -88,7 +88,11 @@ export default function ColumnPage() {
           <p className="text-base text-gray-500 leading-relaxed mb-2">
             なぜ私たちは、生成AIをあらゆる領域に掛け算するのか
           </p>
-          <p className="text-sm text-gray-400">池田 武弘（closip）</p>
+          <div className="flex items-center gap-3 text-sm text-gray-400">
+            <span>池田 武弘（closip）</span>
+            <span className="text-gray-300">|</span>
+            <time dateTime="2026-06-01">2026.06.01</time>
+          </div>
         </div>
 
         <div className="prose-column">
