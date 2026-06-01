@@ -5,6 +5,8 @@ import Contact from "../pages/contact/page";
 import ProductOverview from "../pages/product-overview/page";
 import SeminarOverview from "../pages/seminar-overview/page";
 import Column from "../pages/column/page";
+import GenreList from "../pages/column/GenreListPage";
+import ArticleDetail from "../pages/column/ArticleDetailPage";
 import Company from "../pages/company/page";
 
 const routes: RouteObject[] = [
@@ -27,6 +29,14 @@ const routes: RouteObject[] = [
   {
     path: "/column",
     element: <Column />,
+  },
+  {
+    path: "/column/:genre",
+    element: <GenreList />,
+  },
+  {
+    path: "/column/:genre/:slug",
+    element: <ArticleDetail />,
   },
   {
     path: "/company",

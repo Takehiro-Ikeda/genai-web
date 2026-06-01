@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
+import { GENRES } from './articles';
 
 /**
  * コラム TOPページ
@@ -11,50 +13,6 @@ import Header from '../../components/Header';
  * 4ジャンルのリンク先（/column/security 等）は 2026/7/1 に追加予定。
  * それまでは comingSoon: true でグレーアウト表示。
  */
-
-type Genre = {
-  key: string;
-  label: string;
-  title: string;
-  lead: string;
-  to: string;
-  comingSoon: boolean;
-};
-
-const GENRES: Genre[] = [
-  {
-    key: 'A',
-    label: 'セキュリティ × 生成AI',
-    title: 'セキュリティ',
-    lead: '安全と利便は、本当に二者択一なのか。',
-    to: '/column/security',
-    comingSoon: true,
-  },
-  {
-    key: 'B',
-    label: 'ビジネス × 生成AI',
-    title: 'ビジネス',
-    lead: '事例の奥にある、構造の変化を読む。',
-    to: '/column/business',
-    comingSoon: true,
-  },
-  {
-    key: 'C',
-    label: 'ヘルスケア × 生成AI',
-    title: 'ヘルスケア',
-    lead: 'AI時代に、心と身体をどう守り休ませるか。',
-    to: '/column/healthcare',
-    comingSoon: true,
-  },
-  {
-    key: 'D',
-    label: '暗黙知 × 生成AI',
-    title: '暗黙知',
-    lead: '言葉にならないものを、どこまで引き継げるか。',
-    to: '/column/tacit-knowledge',
-    comingSoon: true,
-  },
-];
 
 export default function ColumnPage() {
   useEffect(() => {
@@ -206,7 +164,7 @@ export default function ColumnPage() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <span className="w-9 h-9 rounded-full bg-teal-600 text-white flex items-center justify-center text-sm font-bold">
-                    {g.key}
+                    {g.badge}
                   </span>
                   <p className="text-xs font-medium text-teal-700 tracking-wide">{g.label}</p>
                 </div>
@@ -218,13 +176,13 @@ export default function ColumnPage() {
                     2026年7月 公開予定
                   </span>
                 ) : (
-                  <a
-                    href={g.to}
+                  <Link
+                    to={`/column/${g.key}`}
                     className="inline-flex items-center gap-1.5 text-sm font-medium text-teal-600 hover:text-teal-700 transition-colors"
                   >
                     記事を読む
                     <i className="ri-arrow-right-line"></i>
-                  </a>
+                  </Link>
                 )}
               </div>
             ))}
